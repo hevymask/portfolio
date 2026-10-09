@@ -5,10 +5,12 @@ const nextConfig: NextConfig = {
     rules: {
       '*.css': {
         loaders: ['@tailwindcss/turbopack'],
-        as: '*.css',
-      },
-    },
+        as: '*.css'
+      }
+    }
   },
+
+  output: 'export',
 }
 
 export default nextConfig

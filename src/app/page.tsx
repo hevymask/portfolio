@@ -7,6 +7,8 @@ export const metadata: Metadata = {
 
 export default function Page() {
   return (
-    <>Hello World</>
+    <main className='min-h-svh'>
+      Hello World
+    </main>
   )
 }
