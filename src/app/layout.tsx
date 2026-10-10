@@ -26,9 +26,8 @@ export default function Layout({ children }: LayoutProps<'/'>) {
       suppressHydrationWarning
     >
       <body className='min-h-full flex flex-col'>
-        <ThemeProvider>
-          {children}
-        </ThemeProvider>
+        <ThemeProvider/>
+        {children}
       </body>
     </html>
   )
