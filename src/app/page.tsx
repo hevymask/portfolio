@@ -1,9 +1,15 @@
 import type { Metadata } from 'next'
 import { env } from '@/lib/env'
 
-export const metadata: Metadata = {
-  title: `The anonymous digital artist - ${env.TITLE}`,
-}
+export const metadata = (() => {
+  const subtitle = env.SUBTITLE
+
+  return {
+    title: `${subtitle} - ${env.TITLE}`,
+    openGraph: { title: subtitle },
+    twitter: { title: subtitle },
+  }
+})()
 
 export default function Page() {
   return (

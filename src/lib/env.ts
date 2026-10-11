@@ -1,7 +1,13 @@
 import { z } from 'zod'
 
 const envSchema = z.object({
-  TITLE: z.string()
+  TITLE: z.string(),
+  SUBTITLE: z.string(),
+  DESCRIPTION: z.string(),
+  
+  URL: z.url(),
+  NAME: z.string(),
+  TWITTER_ACCOUNT: z.string()
 })
 
 export const env = envSchema.parse(process.env)

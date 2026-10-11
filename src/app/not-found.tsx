@@ -1,10 +1,17 @@
 import type { Metadata } from 'next'
 import { ScrambleTextAnimation } from '@/components/animation/scrambleText'
 
-export const metadata: Metadata = {
-  title: 'Not Found',
-  description: "The page you are looking for doesn't exist."
-}
+export const metadata = (() => {
+  const title = 'Not Found'
+  const description = "The page you are looking for doesn't exist."
+
+  return {
+    title,
+    description,
+    openGraph: { title, description },
+    twitter: { title, description },
+  }
+})()
 
 export default function Page() {
   return (

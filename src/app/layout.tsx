@@ -10,12 +10,36 @@ import '@/index.css'
 const oxanium = Oxanium({ subsets: ['latin'], variable: '--font-sans' })
 
 export const metadata: Metadata = {
+  metadataBase: env.URL,
+
   title: {
     default: env.TITLE,
     template: `%s - ${env.TITLE}`,
   },
 
-  description: "Hevy Mask's portfolio page.",
+  description: env.DESCRIPTION,
+
+  authors: {
+    name: env.NAME
+  },
+
+  keywords: [env.NAME, 'Portfolio', 'The anonymous digital artist'],
+
+  openGraph: {
+    title: env.SUBTITLE,
+    description: env.DESCRIPTION,
+    siteName: env.TITLE,
+    locale: "en_US",
+    type: 'profile'
+  },
+
+  twitter: {
+    site: env.TWITTER_ACCOUNT,
+    creator: env.TWITTER_ACCOUNT,
+    description: env.DESCRIPTION,
+    title: env.SUBTITLE,
+    card: 'summary'
+  }
 }
 
 export default function Layout({ children }: LayoutProps<'/'>) {
