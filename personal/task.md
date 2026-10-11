@@ -7,6 +7,4 @@
   - twitter
     - images
 
-  - verification
-
 - components/animationscrambleText.txt

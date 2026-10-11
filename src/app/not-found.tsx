@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { ScrambleTextAnimation } from '@/components/animation/scrambleText'
 
-export const metadata = (() => {
+export const metadata: Metadata = (() => {
   const title = 'Not Found'
   const description = "The page you are looking for doesn't exist."
 

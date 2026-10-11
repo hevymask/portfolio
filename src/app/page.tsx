@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { env } from '@/lib/env'
 
-export const metadata = (() => {
+export const metadata: Metadata = (() => {
   const subtitle = env.SUBTITLE
 
   return {
@@ -14,10 +14,8 @@ export const metadata = (() => {
 export default function Page() {
   return (
     <div className='min-h-svh'>
-      <main className='lg:border lg:my-25 lg:mx-auto lg:py-15 lg:px-12.5 lg:w-3xl p-10 h-[200svh]'>
-        <div className='border-b py-10'>
-
-        </div>
+      <main className='md:my-[7.5%] md:mx-[10%] py-15 md:px-12.5 px-5 md:border h-[200svh]'>
+        Hello World
       </main>
     </div>
   )
